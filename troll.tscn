@@ -1,0 +1,86 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://troll.gd" type="Script" id=1]
+[ext_resource path="res://playerGrey_walk1.png" type="Texture" id=2]
+[ext_resource path="res://playerGrey_walk2.png" type="Texture" id=3]
+[ext_resource path="res://playerGrey_up1.png" type="Texture" id=4]
+[ext_resource path="res://playerGrey_up2.png" type="Texture" id=5]
+[ext_resource path="res://playerGrey_down1.png" type="Texture" id=6]
+[ext_resource path="res://playerGrey_down2.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "down",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 2.92902, 0.861284 )
+
+[node name="Player" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+SPEED = 160
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "right"
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( -0.253774, -0.287701 )
+scale = Vector2( 4.68535, 8.98393 )
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+
+position = Vector2( 1.06249, 0.877432 )
+rotation = 4.71151
+scale = Vector2( 1.14532, 0.953523 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 1.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Limit", "Offset", "Smoothing" ]
+
+

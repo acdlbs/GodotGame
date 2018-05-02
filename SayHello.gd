@@ -14,4 +14,4 @@ func _ready():
 
 
 func _on_Button_pressed():
-	get_node("Label").text = "blahblah"
+	get_node("Label").text = "blahblah2"

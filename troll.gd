@@ -17,15 +17,20 @@ func _physics_process(delta):
 		motion += Vector2(-1, 0)
 	if Input.is_action_pressed("move_right"):
 		motion += Vector2(1, 0)
+		
+	var attack = ""
+	
+	if Input.is_action_pressed("ui_select"):
+		attack = "_attack"
 	
 	if motion.x != 0:
-	    $AnimatedSprite.animation = "right"
+	    $AnimatedSprite.animation = "right" + attack
 	    $AnimatedSprite.flip_v = false
 	    $AnimatedSprite.flip_h = motion.x < 0
 	elif motion.y > 0:
-	    $AnimatedSprite.animation = "down"
+	    $AnimatedSprite.animation = "down" + attack
 	elif motion.y < 0:
-		$AnimatedSprite.animation = "up"
+		$AnimatedSprite.animation = "up" + attack
 	
 	if motion.length() > 0:
 		motion = motion.normalized() * SPEED

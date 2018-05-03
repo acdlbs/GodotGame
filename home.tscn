@@ -4,7 +4,7 @@
 [ext_resource path="res://troll.tscn" type="PackedScene" id=2]
 [ext_resource path="res://SayHello.gd" type="Script" id=3]
 
-[node name="home" type="Node2D" index="0"]
+[node name="home" type="Node2D"]
 
 [node name="floor" type="TileMap" parent="." index="0"]
 

@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Isometric Game"
+config/name="Some sort of game"
 run/main_scene="res://home.tscn"
 config/icon="res://icon.png"
 

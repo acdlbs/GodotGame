@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 export (int) var SPEED
 var lastInput
+var mineAble = false
+var target = null
 
 func _ready():
 	pass
@@ -37,5 +39,19 @@ func _physics_process(delta):
 		$AnimatedSprite.play()
 	else:
 		$AnimatedSprite.stop()
-
 	move_and_slide(motion)
+
+func _input(event):
+	if (mineAble and Input.is_key_pressed(KEY_Z)):
+		print(target)
+		get_node("../../mineableBlock").emit_signal("mine_block")
+
+
+func _on_Area2D_body_entered(body):
+	mineAble = true
+	target = body
+
+func _on_Area2D_body_exited(body):
+	mineAble = false
+	target = null
+

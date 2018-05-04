@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://home.gd" type="Script" id=1]
 [ext_resource path="res://tileset.tres" type="TileSet" id=2]
-[ext_resource path="res://troll.tscn" type="PackedScene" id=3]
-[ext_resource path="res://SayHello.gd" type="Script" id=4]
-[ext_resource path="res://mineableBlock.gd" type="Script" id=5]
-[ext_resource path="res://blockMine.png" type="Texture" id=6]
+[ext_resource path="res://NPC.tscn" type="PackedScene" id=3]
+[ext_resource path="res://troll.tscn" type="PackedScene" id=4]
+[ext_resource path="res://SayHello.gd" type="Script" id=5]
+[ext_resource path="res://mineableBlock.gd" type="Script" id=6]
+[ext_resource path="res://blockMine.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -66,7 +67,13 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Player" parent="walls" index="0" instance=ExtResource( 3 )]
+[node name="RigidBody2D" parent="walls" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 894.04, 97.8874 )
+scale = Vector2( 0.505754, 0.500608 )
+mode = 1
+
+[node name="Player" parent="walls" index="1" instance=ExtResource( 4 )]
 
 position = Vector2( 368.142, 347.007 )
 _sections_unfolded = [ "Collision", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
@@ -85,7 +92,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="Panel" index="0"]
 
@@ -135,7 +142,7 @@ align = 1
 
 [node name="mineableBlock" type="Node" parent="." index="3"]
 
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 
 [node name="Area2D" type="Area2D" parent="mineableBlock" index="0"]
 
@@ -170,7 +177,7 @@ bounce = 0.0
 
 position = Vector2( -9.53082, 4.16965 )
 scale = Vector2( 0.526006, 0.521287 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mineableBlock/StaticBody2D" index="1"]
 

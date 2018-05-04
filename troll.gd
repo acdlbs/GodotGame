@@ -48,10 +48,11 @@ func _input(event):
 
 
 func _on_Area2D_body_entered(body):
-	mineAble = true
-	target = body
+	if (body.get_name() == "Player"):
+		mineAble = true
+		print("foo")
 
 func _on_Area2D_body_exited(body):
-	mineAble = false
-	target = null
+	if (body.get_name() == "Player"):
+		mineAble = false
 

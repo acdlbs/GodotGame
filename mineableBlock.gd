@@ -22,3 +22,4 @@ func _process(delta):
 
 func _mine_block():
 	$StaticBody2D.free()
+	$Area2D.free()

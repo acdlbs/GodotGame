@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/RigidBody2D.gd" type="Script" id=1]
 [ext_resource path="res://assets/playerGrey_walk1_attack.png" type="Texture" id=2]
+[ext_resource path="res://assets/font/Oxygen-Light.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/font/Oxygen-Regular.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -12,6 +14,15 @@ extents = Vector2( 10, 10 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 92.3313, 96.9417 )
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 25
+use_mipmaps = true
+use_filter = false
+font_data = ExtResource( 4 )
+fallback/0 = ExtResource( 3 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Font/fallback", "Settings" ]
 
 [node name="RigidBody2D" type="RigidBody2D"]
 
@@ -94,10 +105,12 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
 text = "foobar"
-percent_visible = 1.0
+percent_visible = -0.125
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "Focus", "Grow Direction", "Hint", "Margin", "Material", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 

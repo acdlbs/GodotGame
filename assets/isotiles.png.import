@@ -7,10 +7,10 @@ path="res://.import/isotiles.png-3d3c9eff760e6d7165ce249086c74282.stex"
 [deps]
 
 source_file="res://assets/isotiles.png"
-source_md5="bc20d457af6e5e5d1cb608f5c7a652fe"
+source_md5="f083ab104f2d700a18e46c1010f99628"
 
 dest_files=[ "res://.import/isotiles.png-3d3c9eff760e6d7165ce249086c74282.stex" ]
-dest_md5="346a46ddfb74af49b29651c7c5971a3e"
+dest_md5="99dea785c99a1c13337e5b77762d68a3"
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/playerGrey_down2_attack.png-b6e891a1dc4a92d11e3b00e823ea0f9b.stex"
+path="res://.import/blockMine.png-8966e5208872162f32d76443faf8cb01.stex"
 
 [deps]
 
-source_file="res://playerGrey_down2_attack.png"
-source_md5="870609a6c9bfd178cab536433d3a88ad"
+source_file="res://assets/blockMine.png"
+source_md5="5c588c4eef7685825ad9d1a45adeb6f9"
 
-dest_files=[ "res://.import/playerGrey_down2_attack.png-b6e891a1dc4a92d11e3b00e823ea0f9b.stex" ]
-dest_md5="0c3e02a29989963aae09984351a30e5b"
+dest_files=[ "res://.import/blockMine.png-8966e5208872162f32d76443faf8cb01.stex" ]
+dest_md5="7a5d5cef10bf2cf1855fbcfd8213c697"
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/playerGrey_up1.png-3aa61131c0882580ef256c2e63b2c4f5.stex"
+path="res://.import/playerGrey_walk1_attack.png-ea652d46ba9d9d3dfcb8524580a81a51.stex"
 
 [deps]
 
-source_file="res://playerGrey_up1.png"
-source_md5="f84241d41055080a3393c9a8619f172b"
+source_file="res://assets/playerGrey_walk1_attack.png"
+source_md5="38db43d32b7645097313e8a78d80f7b8"
 
-dest_files=[ "res://.import/playerGrey_up1.png-3aa61131c0882580ef256c2e63b2c4f5.stex" ]
-dest_md5="572e9245901387b8d67cbbde5205f058"
+dest_files=[ "res://.import/playerGrey_walk1_attack.png-ea652d46ba9d9d3dfcb8524580a81a51.stex" ]
+dest_md5="315e65b494b22e99c38c9fabf79165df"
 
 [params]
 

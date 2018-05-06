@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/isotiles.png-3d3c9eff760e6d7165ce249086c74282.stex"
+path="res://.import/Skeleton Key.png-be5bb5989e39aaa8e6b55f8aba397872.stex"
 
 [deps]
 
-source_file="res://assets/isotiles.png"
-source_md5="b9138f00019a6d2d46f65e45554be82a"
+source_file="res://assets/Skeleton Key.png"
+source_md5="4d4b99eb803875e8e47ee34eb71259a9"
 
-dest_files=[ "res://.import/isotiles.png-3d3c9eff760e6d7165ce249086c74282.stex" ]
-dest_md5="e56aed1869c52184849383b58b81caf1"
+dest_files=[ "res://.import/Skeleton Key.png-be5bb5989e39aaa8e6b55f8aba397872.stex" ]
+dest_md5="f89df21fbc211cbec29e88a0b35bc704"
 
 [params]
 

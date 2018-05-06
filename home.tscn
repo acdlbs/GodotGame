@@ -4,9 +4,9 @@
 [ext_resource path="res://tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://NPC.tscn" type="PackedScene" id=3]
 [ext_resource path="res://player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/SayHello.gd" type="Script" id=5]
-[ext_resource path="res://src/mineableBlock.gd" type="Script" id=6]
-[ext_resource path="res://assets/blockMine.png" type="Texture" id=7]
+[ext_resource path="res://src/mineableBlock.gd" type="Script" id=5]
+[ext_resource path="res://assets/blockMine.png" type="Texture" id=6]
+[ext_resource path="res://item.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -18,7 +18,7 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 33.9234, 35.1709 )
 
-[node name="home" type="Node2D" index="0"]
+[node name="home" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -75,71 +75,9 @@ mode = 1
 position = Vector2( 368.142, 347.007 )
 _sections_unfolded = [ "Collision", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
 
-[node name="Panel" type="Panel" parent="." index="2"]
+[node name="mineableBlock" type="Node" parent="." index="2"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 262.0
-margin_bottom = 132.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 script = ExtResource( 5 )
-
-[node name="Label" type="Label" parent="Panel" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 54.0
-margin_top = 3.0
-margin_right = 194.0
-margin_bottom = 55.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "orig text"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="MyButton" type="Button" parent="Panel" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 179.0
-margin_top = 66.0
-margin_right = 279.0
-margin_bottom = 124.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "do something"
-flat = false
-align = 1
-
-[node name="mineableBlock" type="Node" parent="." index="3"]
-
-script = ExtResource( 6 )
 
 [node name="Area2D" type="Area2D" parent="mineableBlock" index="0"]
 
@@ -174,7 +112,7 @@ bounce = 0.0
 
 position = Vector2( -9.53082, 4.16965 )
 scale = Vector2( 0.526006, 0.521287 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mineableBlock/StaticBody2D" index="1"]
 
@@ -182,7 +120,10 @@ position = Vector2( -11.8603, 1.05511 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
-[connection signal="pressed" from="Panel/MyButton" to="Panel" method="_on_Button_pressed"]
+[node name="item" parent="." index="3" instance=ExtResource( 7 )]
+
+position = Vector2( 985.793, 204.277 )
+mode = 1
 
 [connection signal="body_entered" from="mineableBlock/Area2D" to="walls/Player" method="_on_Area2D_body_entered"]
 

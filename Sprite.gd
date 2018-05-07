@@ -20,8 +20,8 @@ func _ready():
 
 func _input(event):
 	if (Input.is_key_pressed(KEY_Z) and isPlayerNear):
-		_pickup()
 		print("pickup item")
+		_pickup()
 
 
 func _on_Area2D_body_entered(body):
@@ -40,3 +40,6 @@ func _get_icon_image():
 
 func _pickup():
 	player._add_item_inventory(self)
+	get_node("Sprite").queue_free()
+	get_node("CollisionShape2D").queue_free()
+	get_node("Area2D").queue_free()

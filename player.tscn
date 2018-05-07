@@ -79,7 +79,7 @@ shape = SubResource( 2 )
 [node name="Camera2D" type="Camera2D" parent="." index="2"]
 
 position = Vector2( 1.06249, 0.877432 )
-rotation = 4.71151
+rotation = -1.57168
 scale = Vector2( 1.14532, 0.953523 )
 anchor_mode = 1
 rotating = false
@@ -92,7 +92,7 @@ limit_bottom = 10000000
 limit_smoothed = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
-smoothing_enabled = true
+smoothing_enabled = false
 smoothing_speed = 1.0
 offset_v = 0.0
 offset_h = 0.0
@@ -103,6 +103,49 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin", "Limit", "Offset", "Smoothing" ]
+_sections_unfolded = [ "Drag Margin", "Limit", "Offset", "Smoothing", "Visibility" ]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
+
+layer = 1
+offset = Vector2( 500, 500 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 500, 500 )
+
+[node name="Panel" type="Panel" parent="CanvasLayer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -335.0
+margin_right = 336.0
+margin_bottom = 70.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Focus", "Rect", "custom_styles" ]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Panel" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 53.0
+margin_bottom = 53.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+stretch_mode = 0
 
 

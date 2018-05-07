@@ -21,5 +21,5 @@ func _process(delta):
 	pass
 
 func _mine_block():
-	$StaticBody2D.free()
-	$Area2D.free()
+	$StaticBody2D.queue_free()
+	$Area2D.queue_free()

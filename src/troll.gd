@@ -65,4 +65,4 @@ func _on_Area2D_body_exited(body):
 
 func _add_item_inventory(var item):
 	inventory.append(item)
-	get_node("CanvasLayer/Panel/TextureRect").texture = item.iconImage
+	get_node("CanvasLayer/Panel/TextureRect").texture = load(item.iconImage)

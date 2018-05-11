@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://src/troll.gd" type="Script" id=1]
+[ext_resource path="res://src/player.gd" type="Script" id=1]
 [ext_resource path="res://assets/playerGrey_walk1.png" type="Texture" id=2]
 [ext_resource path="res://assets/playerGrey_walk2.png" type="Texture" id=3]
 [ext_resource path="res://assets/playerGrey_up1.png" type="Texture" id=4]
@@ -147,5 +147,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Margin" ]
 
 
